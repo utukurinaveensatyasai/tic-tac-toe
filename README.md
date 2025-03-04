@@ -17,8 +17,8 @@ This is a classic **Tic Tac Toe** game designed for **Two Players**, built using
 - Python GUI Development with **Tkinter**
 - **Game Development** and logic handling
 - **Problem-Solving** and Algorithm Optimization
-![Tic Tac Toe Gameplay](![gameplay](https://github.com/user-attachments/assets/ebe3bbcf-6b05-4b02-b184-1f7d1f0c2337)
-)
+![Tic Tac Toe Gameplay](https://github.com/user-attachments/assets/ebe3bbcf-6b05-4b02-b184-1f7d1f0c2337)
+
 ## 📌 How to Run the Project?
 1. **Install Python** (if not installed) – [Download Python](https://www.python.org/downloads/)
 2. **Run the script** using:
