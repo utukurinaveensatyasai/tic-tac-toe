@@ -1,7 +1,7 @@
 # Tic Tac Toe - Two-Player Mode
 
 ## 📌 Project Overview
-This is a classic **Tic Tac Toe** game designed for **Two Players**, built using **Python and Tkinter**. The game provides a simple yet engaging experience where two players take turns marking their moves on a 3x3 grid. This project is perfect for students preparing for **placements**, showcasing their skills in GUI development and logical thinking.
+This is a classic **Tic Tac Toe** game designed for **Two Players**, built using **Python and Tkinter**. The game provides a simple yet engaging experience where two players take turns marking their moves on a 3x3 grid. This project help me in problem solving and helps for DSA in **placements**, showcasing my skills in GUI development and logical thinking.
 
 ## 🚀 Features
 - **Two-Player Mode** for playing with friends
