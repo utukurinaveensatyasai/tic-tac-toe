@@ -82,27 +82,31 @@ def index():
 def move():
     global board
     data = request.json
-    row, col = data['row'], data['col']
+    row, col = data.get('row'), data.get('col')
+
     if board[row][col] == " ":
         board[row][col] = "X"
         if check_winner():
-            return jsonify({"status": "win", "winner": "X"})
+            return jsonify({"status": "win", "winner": "X", "board": board})
         if is_full():
-            return jsonify({"status": "draw"})
+            return jsonify({"status": "draw", "board": board})
+
         ai_move = best_move()
         if ai_move:
             board[ai_move[0]][ai_move[1]] = "O"
+
         if check_winner():
-            return jsonify({"status": "win", "winner": "O"})
+            return jsonify({"status": "win", "winner": "O", "board": board})
         if is_full():
-            return jsonify({"status": "draw"})
+            return jsonify({"status": "draw", "board": board})
+
     return jsonify({"status": "continue", "board": board})
 
 @app.route('/reset', methods=['POST'])
 def reset():
     global board
     board = init_board()
-    return jsonify({"message": "Game Reset"})
+    return jsonify({"message": "Game Reset", "board": board})
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
