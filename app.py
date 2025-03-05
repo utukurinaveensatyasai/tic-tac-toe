@@ -4,13 +4,11 @@ import math
 
 app = Flask(__name__)
 
-# Initialize board
 def init_board():
     return [[" " for _ in range(3)] for _ in range(3)]
 
 board = init_board()
 
-# Check Winner
 def check_winner():
     for row in board:
         if row[0] == row[1] == row[2] and row[0] != " ":
@@ -24,11 +22,9 @@ def check_winner():
         return board[0][2]
     return None
 
-# Check if board is full
 def is_full():
     return all(cell != " " for row in board for cell in row)
 
-# Minimax Algorithm
 def minimax(depth, is_maximizing):
     winner = check_winner()
     if winner == "X":
@@ -59,7 +55,6 @@ def minimax(depth, is_maximizing):
                     best_score = min(best_score, score)
         return best_score
 
-# Get Best Move for AI
 def best_move():
     best_score = -math.inf
     move = None
@@ -82,31 +77,36 @@ def index():
 def move():
     global board
     data = request.json
-    row, col = data.get('row'), data.get('col')
+    row, col = data['row'], data['col']
 
     if board[row][col] == " ":
         board[row][col] = "X"
-        if check_winner():
-            return jsonify({"status": "win", "winner": "X", "board": board})
+
+        if check_winner() == "X":
+            return jsonify({"status": "win", "winner": "X", "board": sum(board, [])})
+
         if is_full():
-            return jsonify({"status": "draw", "board": board})
+            return jsonify({"status": "draw", "board": sum(board, [])})
 
         ai_move = best_move()
         if ai_move:
             board[ai_move[0]][ai_move[1]] = "O"
 
-        if check_winner():
-            return jsonify({"status": "win", "winner": "O", "board": board})
-        if is_full():
-            return jsonify({"status": "draw", "board": board})
+            if check_winner() == "O":
+                return jsonify({"status": "win", "winner": "O", "board": sum(board, [])})
 
-    return jsonify({"status": "continue", "board": board})
+        if is_full():
+            return jsonify({"status": "draw", "board": sum(board, [])})
+
+        return jsonify({"status": "continue", "board": sum(board, [])})
+
+    return jsonify({"status": "invalid", "message": "Cell already occupied", "board": sum(board, [])})
 
 @app.route('/reset', methods=['POST'])
 def reset():
     global board
     board = init_board()
-    return jsonify({"message": "Game Reset", "board": board})
+    return jsonify({"message": "Game Reset", "board": sum(board, [])})
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
