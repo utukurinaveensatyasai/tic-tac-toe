@@ -18,6 +18,8 @@ This is a classic **Tic Tac Toe** game designed for **Two Players**, built using
 - **Game Development** and logic handling
 - **Problem-Solving** and Algorithm Optimization
 
+##Live Demo : [Click here](https://tic-tac-toe-8rd3.onrender.com)
+
   
 ![Tic Tac Toe Gameplay](tic-tac-toe-gameplay.gif)
 
