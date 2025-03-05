@@ -1,44 +1,82 @@
-# Tic Tac Toe - Two-Player Mode
+# Tic Tac Toe with AI (Minimax Algorithm)
 
-## 📌 Project Overview
-This is a classic **Tic Tac Toe** game designed for **Two Players**, built using **Python and Tkinter**. The game provides a simple yet engaging experience where two players take turns marking their moves on a 3x3 grid. This project help me in problem solving and helps for DSA in **placements**, showcasing my skills in GUI development and logical thinking.
-
-## 🚀 Features
-- **Two-Player Mode** for playing with friends
-- **User-friendly UI** with a clean and interactive layout
-- **Automatic winner detection** and game reset
-- **Simple and efficient Python code** for game logic
-
-## 🛠️ Technologies Used
-- **Python** (Core Programming)
-- **Tkinter** (GUI Development)
-
-## 🎯 Skills Learned
-- Python GUI Development with **Tkinter**
-- **Game Development** and logic handling
-- **Problem-Solving** and Algorithm Optimization
-
-##Live Demo : [Click here](https://tic-tac-toe-8rd3.onrender.com)
-
-  
-![Tic Tac Toe Gameplay](tic-tac-toe-gameplay.gif)
-
-## 📌 How to Run the Project?
-1. **Install Python** (if not installed) – [Download Python](https://www.python.org/downloads/)
-2. **Run the script** using:
-   ```bash
-   python tic_tac_toe.py
-   ```
-3. **Play with a friend and enjoy the game!** 🎮
-
-## 🔥 Future Enhancements
-- 🎨 **Enhanced UI** with animations and themes
-- 📱 **Web and Mobile version** using React and Flutter
-
-## 📧 Contact
-For any queries, feel free to reach out!
-📩 Email: [utukurinaveensatyasai@gmail.com]
+This is a **Flask-based Tic Tac Toe game** where a player competes against an AI opponent. The AI utilizes the **Minimax Algorithm** to make optimal moves, ensuring a challenging experience.
 
 ---
-🚀 *Showcase this project in your resume to impress recruiters!*
+## Features 🚀
+✅ **Single-player mode** (vs AI)  
+✅ **AI uses Minimax Algorithm** for optimal moves  
+✅ **Real-time interaction** using JavaScript and Flask APIs  
+✅ **Automatic win/draw detection**  
+✅ **Game reset option**  
+
+---
+## How the AI Works 🤖
+- The AI is implemented using the **Minimax Algorithm**, which evaluates all possible moves and chooses the one that minimizes the player's chances of winning.
+- The AI **always plays as 'O'**, while the player is **'X'**.
+- The AI picks the best move after the player moves, ensuring optimal play.
+
+---
+---
+Live Demo : [click here](https://tic-tac-toe-8rd3.onrender.com)
+## Installation & Setup 🛠
+
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/your-repo/tic-tac-toe-ai.git
+cd tic-tac-toe-ai
+```
+
+### 2️⃣ Install Dependencies
+```sh
+pip install flask
+```
+
+### 3️⃣ Run the Flask App
+```sh
+python app.py
+```
+
+### 4️⃣ Open in Browser 🌐
+Go to:
+```
+http://127.0.0.1:5000/
+```
+
+---
+## File Structure 📂
+```
+📁 tic-tac-toe-ai/
+│-- app.py          # Flask backend with AI logic
+│-- templates/
+│   ├── index.html  # Frontend UI
+│-- static/
+│   ├── script.js   # Handles game logic & API calls
+│   ├── style.css   # Styling for the game board
+```
+
+---
+
+
+---
+## How to Play 🎮
+1. Click on any empty cell to make your move as **'X'**.
+2. AI **('O')** will respond automatically.
+3. The game continues until **someone wins or the board is full**.
+4. Click **Reset** to start a new match.
+
+---
+## Technologies Used 🛠
+- **Python (Flask)** - Backend API
+- **JavaScript (Fetch API)** - Frontend logic
+- **HTML/CSS** - Game UI
+
+---
+## Future Enhancements 🌟
+- Add difficulty levels for AI.
+- Implement animations for smoother UI.
+- Allow different board sizes (4x4, 5x5).
+
+---
+### Made with ❤️ and AI 🤖
 
